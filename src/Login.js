@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputForm from "./components/inputForm";
 import LoginButton from "./components/LoginButton";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 function Login() {
@@ -28,7 +29,7 @@ function Login() {
     return (
         <div>
             <div>
-                {isLogin ? <p>로그인 되었습니다.</p> : <p>로그인이 필요합니다.</p>}
+                {isLogin ? <p className="bg-gradient-to-r from-blue-500 to-pink-500"><Link to='/main'>로그인 되었습니다.</Link></p> : <p>로그인이 필요합니다.</p>}
             </div>
             <div className="bg-white p-5 rounded-2xl shadow-md flex flex-col gap-3">
                 {/* <input className="text-sm rounded-lg px-2"
